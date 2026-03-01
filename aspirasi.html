@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspirasi MPK MAN Bandung Barat</title>
+    
+    <link rel="stylesheet" href="background.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body class="p-6 md:p-12 bg-[#050505] text-white">
+
+    <button onclick="toggleMenu()" class="fixed top-6 right-6 z-50 p-3 glass rounded-xl hover:bg-red-600/20 transition-all border border-zinc-700" id="btn-menu">
+        <i data-lucide="menu" id="menu-icon" class="text-white w-6 h-6"></i>
+    </button>
+
+    <div id="side-menu" class="fixed inset-0 z-40 translate-x-full transition-transform duration-300 ease-in-out flex">
+        <div class="flex-1 bg-black/60 backdrop-blur-sm" onclick="toggleMenu()"></div>
+        <div class="w-80 bg-[#0a0a0a] h-full p-8 overflow-y-auto border-l border-zinc-800 shadow-2xl">
+            <h2 class="text-2xl font-bold text-white mb-8 mt-12 text-shadow-glow">Menu <span class="text-red-600">MPK</span></h2>
+            <div class="space-y-8">
+                <div>
+                    <h4 class="text-xs font-bold text-red-500 uppercase tracking-widest mb-3">Tentang MPK</h4>
+                    <p class="text-sm text-zinc-400 leading-relaxed">
+                        Majelis Perwakilan Kelas (MPK) MAN Bandung Barat adalah lembaga legislatif siswa yang mengawasi kinerja OSIS dan menjadi jembatan aspirasi siswa ke sekolah.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-red-500 uppercase tracking-widest mb-3">Organisasi</h4>
+                    <button onclick="showStruktur()" class="w-full flex items-center justify-between p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-red-600/20 transition-all group">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="users" class="w-5 h-5 text-red-500"></i>
+                            <span class="text-sm font-bold">Struktur Pengurus</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-red-500 uppercase tracking-widest mb-3">Call Center</h4>
+                    <a href="https://wa.me/628123456789" target="_blank" class="flex items-center gap-3 p-4 bg-green-600/10 border border-green-600/20 rounded-2xl hover:bg-green-600/20 transition-all group">
+                        <i class="fa-brands fa-whatsapp text-green-500 text-2xl"></i>
+                        <div>
+                            <p class="text-[10px] text-zinc-500 uppercase font-bold text-left">WhatsApp Resmi</p>
+                            <p class="text-sm text-white font-bold tracking-wide">Chat MPK Center</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-2xl mx-auto" id="main-content">
+        <header class="text-center mb-12">
+             <div class="flex justify-center space-x-6 mb-6">
+                <div class="w-24 h-24 flex items-center justify-center drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                    <img src="MAN.png" alt="Logo Sekolah" class="w-full h-full object-contain">
+                </div>
+                <div class="w-24 h-24 flex items-center justify-center drop-shadow-[0_0_15px_rgba(185,28,28,0.3)]">
+                    <img src="MPK.png" alt="Logo MPK" class="w-full h-full object-contain">
+                </div>
+            </div>
+            <h1 class="text-3xl font-bold mb-2 uppercase tracking-tight">MPK MAN Bandung Barat</h1>
+            <p class="text-zinc-400">Silakan pilih tombol di bawah untuk menyampaikan aspirasi.</p>
+        </header>
+
+        <div id="main-menu" class="space-y-4">
+            <button onclick="showForm('Aspirasi Berkala')" class="w-full glass p-6 rounded-2xl flex items-center gap-4 hover:bg-white/5 transition text-left group">
+                <div class="bg-red-600/20 p-3 rounded-xl group-hover:scale-110 transition-transform">
+                    <i data-lucide="edit-3" class="text-red-500"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-white">Aspirasi Berkala</h3>
+                    <p class="text-sm text-zinc-400">Klik untuk mengisi form aspirasi rutin.</p>
+                </div>
+            </button>
+            <div class="flex justify-center space-x-10 pt-8 text-zinc-500">
+                <a href="https://www.instagram.com/osismpkmanbb?igsh=MWpxYTB0dmU1NG95dw==" target="_blank" class="hover:text-pink-500 text-3xl transition-all"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mpkmanbandungbarat@gmail.com" target="_blank" class="hover:text-blue-400 text-3xl transition-all"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div id="form-section" class="hidden glass p-8 rounded-[2rem] shadow-2xl transition-all duration-500 transform">
+            <button onclick="hideForm()" class="group text-zinc-500 mb-8 flex items-center gap-2 hover:text-white transition-all">
+                <i data-lucide="arrow-left" class="w-4 group-hover:-translate-x-1 transition-transform"></i> 
+                <span class="text-sm font-medium">Kembali</span>
+            </button>
+            <h2 id="form-title" class="text-3xl font-extrabold mb-8 bg-gradient-to-r from-red-500 to-red-800 bg-clip-text text-transparent">Aspirasi Berkala</h2>
+            <form id="aspirasi-form" class="space-y-6">
+                <input type="hidden" id="jenis_aspirasi" name="Jenis Aspirasi" value="">
+                <div class="space-y-2">
+                    <label class="text-xs uppercase tracking-widest text-zinc-500 font-bold ml-1">Nama Lengkap *</label>
+                    <input type="text" name="Nama" required class="w-full p-4 rounded-2xl transition-all" placeholder="Masukkan nama">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label class="text-xs uppercase tracking-widest text-zinc-500 font-bold ml-1">Kelas *</label>
+                        <select name="Kelas" required class="w-full p-4 rounded-2xl cursor-pointer">
+                            <option value="" disabled selected>Pilih Kelas</option>
+                            <optgroup label="Kelas 10">
+                                <option>10A</option><option>10B</option><option>10C</option><option>10D</option><option>10E</option><option>10F</option><option>10G</option><option>10H</option><option>10I</option><option>10J</option><option>10K</option>
+                            </optgroup>
+                            <optgroup label="Kelas 11">
+                                <option>11A</option><option>11B</option><option>11C</option><option>11D</option><option>11E</option><option>11F</option><option>11G</option><option>11H</option><option>11I</option><option>11J</option><option>11K</option>
+                            </optgroup>
+                            <optgroup label="Kelas 12">
+                                <option>12A</option><option>12B</option><option>12C</option><option>12D</option><option>12E</option><option>12F</option><option>12G</option><option>12H</option><option>12I</option><option>12J</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs uppercase tracking-widest text-zinc-500 font-bold ml-1">Kategori *</label>
+                        <select name="Kategori" required class="w-full p-4 rounded-2xl cursor-pointer">
+                            <option value="" disabled selected>Pilih Tujuan</option>
+                            <option>Sekolah</option><option>OSIS</option><option>MPK</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-xs uppercase tracking-widest text-zinc-500 font-bold ml-1">Isi Aspirasi *</label>
+                    <textarea name="Pesan" rows="5" required class="w-full p-4 rounded-2xl transition-all resize-none" placeholder="Tuliskan aspirasimu secara mendalam..."></textarea>
+                </div>
+                <button type="submit" id="submit-btn" class="w-full text-white font-bold p-4 rounded-2xl transition-all active:scale-95 shadow-lg">Kirim Aspirasi</button>
+            </form>
+        </div>
+
+        <div id="struktur-section" class="hidden transition-all duration-500 pb-20">
+             <button onclick="hideStruktur()" class="group text-zinc-500 mb-8 flex items-center gap-2 hover:text-white transition-all">
+                <i data-lucide="arrow-left" class="w-4 group-hover:-translate-x-1 transition-transform"></i> 
+                <span class="text-sm font-medium">Kembali ke Beranda</span>
+            </button>
+            <h2 class="text-3xl font-black mb-12 text-center uppercase tracking-tighter italic">
+                Struktur Pengurus <br><span class="text-red-600">MPK MAN BB 2025/2026</span>
+            </h2>
+            <div class="mb-16">
+        <h3 class="text-red-500 text-xs font-bold uppercase tracking-[0.3em] mb-6 text-center">Pengurus Inti</h3>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div class="glass p-4 rounded-2xl border border-red-600/30 text-center group">
+                <div class="aspect-square mx-auto mb-3 rounded-xl overflow-hidden border border-zinc-800">
+                    <img src="fotoadila.png" alt="Adila" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                </div>
+                <h4 class="font-bold text-[11px]">Adila Debi Firdaus</h4>
+                <p class="text-red-500 text-[8px] uppercase font-black">Ketua Umum </p>
+            </div>
+            <div class="glass p-4 rounded-2xl border border-zinc-800 text-center group">
+                <div class="aspect-square mx-auto mb-3 rounded-xl overflow-hidden border border-zinc-800">
+                    <img src="fotoarumi.png" alt="Arumi" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                </div>
+                <h4 class="font-bold text-[11px]">Arumi Nur Siti Ajizah</h4>
+                <p class="text-zinc-500 text-[8px] uppercase font-black">Wakil Ketua </p>
+            </div>
+            <div class="glass p-4 rounded-2xl border border-zinc-800 text-center group">
+                <div class="aspect-square mx-auto mb-3 rounded-xl overflow-hidden border border-zinc-800">
+                    <img src="fotorifa.png" alt="Rifa" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                </div>
+                <h4 class="font-bold text-[11px]">Rifa Mahira</h4>
+                <p class="text-zinc-500 text-[8px] uppercase font-black">Sekretaris </p>
+            </div>
+            <div class="glass p-4 rounded-2xl border border-zinc-800 text-center group">
+                <div class="aspect-square mx-auto mb-3 rounded-xl overflow-hidden border border-zinc-800">
+                    <img src="fotoamel.png" alt="Amel" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                </div>
+                <h4 class="font-bold text-[11px]">Nur Amel</h4>
+                <p class="text-zinc-500 text-[8px] uppercase font-black">Bendahara </p>
+            </div>
+            <div class="glass p-4 rounded-2xl border border-zinc-800 text-center group">
+                <div class="aspect-square mx-auto mb-3 rounded-xl overflow-hidden border border-zinc-800">
+                    <img src="fotosarif.png" alt="Sarif" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                </div>
+                <h4 class="font-bold text-[11px]">Sarif Hidayatullah</h4>
+                <p class="text-zinc-500 text-[8px] uppercase font-black">Humas </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="space-y-12">
+        
+        <div>
+            <h3 class="text-white text-xs font-bold uppercase border-l-2 border-red-600 pl-3 mb-4">Komisi A: Aspirator </h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+                <div class="glass p-3 rounded-xl border border-red-600/20 text-center">
+                    <img src="fotoarkan.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">M. Arkan Engga N.</p>
+                    <p class="text-[7px] text-red-500 uppercase">Koordinator </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotosyaira.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Syaira Zahra J.A.</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotodela.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Dela Rahayu</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotosahla.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Sahla Muyasar</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotodimas.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Dimas Rizki F.</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-white text-xs font-bold uppercase border-l-2 border-red-600 pl-3 mb-4">Komisi B: Pengawas Sekbid 1,2,3 </h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+                <div class="glass p-3 rounded-xl border border-red-600/20 text-center">
+                    <img src="fotoagung.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Agung Nurjaman</p>
+                    <p class="text-[7px] text-red-500 uppercase">Koordinator </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fototristan.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Tristan Syahtu S.N.</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotoamira.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Amira Fahra I.</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotozulfan.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Zulfan Nur F.</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotodita.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Dita Maulia N.</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-white text-xs font-bold uppercase border-l-2 border-red-600 pl-3 mb-4">Komisi C: Pengawas Sekbid 4,5,6 </h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="glass p-3 rounded-xl border border-red-600/20 text-center">
+                    <img src="fotoazka.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Azka Aulia Zahra S.</p>
+                    <p class="text-[7px] text-red-500 uppercase">Koordinator </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotoalanis.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Alanis Angel M.</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotozahratun.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Siti Zahratun N.</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotofarhan.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Moch Farhan A.A.</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-white text-xs font-bold uppercase border-l-2 border-red-600 pl-3 mb-4">Komisi D: Pengawas Sekbid 7,8,9,10 </h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+                <div class="glass p-3 rounded-xl border border-red-600/20 text-center">
+                    <img src="fotonaila.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Nailah Yumna D.S.</p>
+                    <p class="text-[7px] text-red-500 uppercase">Koordinator </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotodila.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Dila Salsabila P.</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotobasith.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Muhammad Basith</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fototazka.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Tazka Hikma N.N.N.</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+                <div class="glass p-3 rounded-xl border border-zinc-800 text-center">
+                    <img src="fotoalpan.png" class="w-12 h-12 mx-auto mb-2 rounded-lg object-cover">
+                    <p class="text-[10px] font-bold leading-tight">Alpan Fauzi</p>
+                    <p class="text-[7px] text-zinc-500 uppercase italic">Anggota </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+        </div>
+
+        <footer class="mt-20 text-center text-zinc-600 text-[10px] tracking-widest uppercase">
+            &copy; 2026 MPK MAN Bandung Barat.
+        </footer>
+    </div>
+
+    <div id="success-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md"></div>
+        <div class="glass border border-white/20 p-8 rounded-[2.5rem] max-w-sm w-full relative z-10 text-center transform transition-all scale-90 opacity-0" id="modal-content">
+            <div class="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle-2" class="text-green-500 w-12 h-12"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Berhasil Terkirim!</h3>
+            <p class="text-zinc-400 text-sm mb-8">Terima kasih! Aspirasi kamu telah kami terima dan akan segera ditinjau oleh tim MPK.</p>
+            <button onclick="closeModal()" class="w-full bg-white text-black font-bold py-4 rounded-2xl hover:bg-zinc-200 transition-all active:scale-95">
+                Selesai
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
