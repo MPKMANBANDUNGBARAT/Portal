@@ -23,14 +23,14 @@ const products = [
     },
     {
         id: 3,
-        name: "Brownies Lumer Cup",
-        price: "10000",
-        stock: 5,
-        sold: "85",
+        name: "KERIPIK PISANG",
+        price: "15000",
+        stock: 30,
+        sold: "20",
         rating: "4.9",
-        image: "foto/brownies.jpg",
+        image: "WhatsApp Image 2026-02-24 at 14.43.38.jpg",
         category: "Makanan",
-        desc: "Brownies cokelat lumer di dalam cup. Manisnya pas!"
+        desc: "Keripik Pisang Renya,Punya Banyak Varian Rasa"
     },
     {
         id: 4,
@@ -133,4 +133,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
