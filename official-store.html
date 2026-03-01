@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
+    <title>Official Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="tema.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-[#050505] text-white font-['Inter']">
+
+    <header class="header-sticky p-4 glass z-50">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <h1 class="text-xl font-bold text-[#8b0000] tracking-tighter uppercase">
+                OFFICIAL<span class="text-white text-xs font-light tracking-[0.4em] ml-2">STORE</span>
+            </h1>
+            <div class="flex gap-4 items-center">
+                <i class="fa-solid fa-magnifying-glass text-zinc-400 text-sm"></i>
+                <div class="w-8 h-8 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center">
+                    <i class="fa-solid fa-user text-[10px]"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-4 pt-12 pb-8 text-center animate-dp">
+        <h1 class="text-4xl md:text-7xl font-black italic tracking-tighter mb-2 leading-none">
+            OFFICIAL <span class="text-[#8b0000]">STORE</span>
+        </h1>
+        <p class="text-zinc-500 text-[10px] md:text-xs mb-8 tracking-[0.3em] uppercase font-light">
+            "Developed to Disrupt. Engineered for the Inner Circle."
+        </p>
+        <a href="#katalog-anchor" class="inline-block bg-white text-black font-bold text-xs px-10 py-4 rounded-full hover:bg-[#8b0000] hover:text-white transition-all duration-500 shadow-lg shadow-white/5 uppercase tracking-widest">
+            Lihat Katalog
+        </a>
+    </section>
+
+    <div id="katalog-anchor" class="max-w-6xl mx-auto px-4 mb-6">
+        <div class="relative mb-6">
+            <input type="text" id="search-input" placeholder="Cari item di database..." 
+                   class="w-full bg-zinc-900/50 border border-zinc-800 py-4 px-6 rounded-2xl outline-none focus:border-[#8b0000] transition-all text-sm">
+        </div>
+
+        <div class="flex gap-2 overflow-x-auto pb-2 hide-scrollbar">
+            <button class="filter-btn active category-pill whitespace-nowrap px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border border-zinc-800 transition-all" data-category="all">Semua</button>
+            <button class="filter-btn category-pill whitespace-nowrap px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border border-zinc-800 transition-all" data-category="Aksesoris">Aksesoris</button>
+            <button class="filter-btn category-pill whitespace-nowrap px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border border-zinc-800 transition-all" data-category="Makanan">Makanan</button>
+            <button class="filter-btn category-pill whitespace-nowrap px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border border-zinc-800 transition-all" data-category="Pakaian">Pakaian</button>
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-4 pb-24">
+        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            </div>
+    </main>
+
+    <footer class="max-w-6xl mx-auto px-4 py-10 border-t border-zinc-900 text-center">
+        <p class="text-[9px] text-zinc-600 tracking-[0.5em] uppercase">Authorized Distributor // Syndicate Lab 06</p>
+    </footer>
+
+    <script src="LOGIKA.js"></script>
+</body>
+</html>

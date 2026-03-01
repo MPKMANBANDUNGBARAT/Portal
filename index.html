@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAL RESMI - MPK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+        }
+        .btn-portal {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-portal:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -10px rgba(207, 12, 12, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-[#050505] text-white font-['Inter']">
+
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 hero-gradient relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-red-600 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-zinc-600 rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="z-10 animate-fade-in">
+            <h2 class="text-red-600 font-black tracking-[0.5em] text-xs mb-4 uppercase">Official Gateway</h2>
+            <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter mb-6">MPK <span class="text-zinc-500"></span></h1>
+            <p class="max-w-xl mx-auto text-zinc-400 text-sm md:text-base font-light leading-relaxed mb-12">
+                Lembaga Legislatif Siswa yang berdedikasi untuk mengawal aspirasi, mengawasi kinerja, dan mempererat solidaritas di lingkungan sekolah.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto w-full">
+                <a href="MPK MAN BANDUNG BARAT.html" class="btn-portal group bg-white/5 border border-white/10 p-8 rounded-[2rem] flex flex-col items-center gap-4">
+                    <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-red-600 transition-colors">
+                        <i class="fa-solid fa-bullhorn text-white"></i>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-lg uppercase tracking-widest">Aspirasi</h3>
+                        <p class="text-[10px] text-zinc-500 mt-1">Sampaikan Suara & Keluhanmu</p>
+                    </div>
+                </a>
+
+                <a href="official store.html" class="btn-portal group bg-white/5 border border-white/10 p-8 rounded-[2rem] flex flex-col items-center gap-4">
+                    <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-red-600 transition-colors">
+                        <i class="fa-solid fa-cart-shopping text-white"></i>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-lg uppercase tracking-widest">Official Store</h3>
+                        <p class="text-[10px] text-zinc-500 mt-1">Dukung Kegiatan Lewat Merchandise</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-5xl mx-auto px-6 py-24 border-t border-white/5">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl font-black italic uppercase tracking-tighter mb-6">Apa itu <br><span class="text-red-600">MPK?</span></h2>
+                <div class="space-y-4 text-zinc-400 text-sm leading-relaxed">
+                    <p>Majelis Permusyawaratan Kelas (MPK) adalah organisasi yang bertugas mengawasi kinerja OSIM dan menampung aspirasi siswa dari setiap kelas.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-red-600 mt-1"></i>
+                            <span><b>Legislatif:</b> Membuat peraturan dan kebijakan internal siswa.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-red-600 mt-1"></i>
+                            <span><b>Yudikatif:</b> Mengawasi pelaksanaan program kerja OSIM.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-red-600 mt-1"></i>
+                            <span><b>Aspiratif:</b> Menjadi jembatan antara siswa dan sekolah.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-zinc-900 aspect-video rounded-[2rem] border border-white/5 overflow-hidden">
+                <img src="https://via.placeholder.com/600x400" alt="MPK Photo" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-white/5">
+        <p class="text-[10px] tracking-[0.3em] text-zinc-600 uppercase">© 2026 Syndicate 06 - All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
