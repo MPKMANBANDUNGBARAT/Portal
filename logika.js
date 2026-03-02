@@ -28,7 +28,7 @@ const products = [
         stock: 30,
         sold: "20",
         rating: "4.9",
-        image: "kiripik.jpg",
+        image: "foto/kiripik.jpg",
         category: "Makanan",
         desc: "Keripik Pisang Renya,Punya Banyak Varian Rasa"
     },
@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 
 
