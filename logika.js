@@ -28,7 +28,7 @@ const products = [
         stock: 30,
         sold: "20",
         rating: "4.9",
-        image: "WhatsApp Image 2026-02-24 at 14.43.38.jpg",
+        image: "kiripik.jpg",
         category: "Makanan",
         desc: "Keripik Pisang Renya,Punya Banyak Varian Rasa"
     },
@@ -133,5 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 
