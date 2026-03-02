@@ -39,7 +39,7 @@ const products = [
         stock: 5,
         sold: "12",
         rating: "5.0",
-        image: "foto/tshirt.jpg",
+        image: "produk/WhatsApp Image 2026-02-14 at 17.34.42.jpeg",
         category: "Pakaian",
         desc: "Kaos eksklusif SYNDICATE 06. Bahan katun combed 30s."
     }
@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 
 
