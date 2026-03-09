@@ -1,40 +1,40 @@
 const products = [
     {
         id: 1,
-        name: "Lanyard Premium MPK",
+        name: "SYNDICATE 06 // BATCH X",
         price: "15000",
         stock: 5,
         sold: "45",
         rating: "4.9",
-        image: "foto/lanyard.jpg",
+        image: "foto/WhatsApp Image 2026-03-09 at 23.41.15.jpeg",
         category: "Aksesoris",
-        desc: "Lanyard kualitas premium dengan bahan tisu lembut. Cocok untuk kartu pelajar atau id card panitia."
+        desc: "Bach X Adalah Desain Terbatas SYNDICATE 06."
     },
     {
         id: 2,
-        name: "Basreng Pedas Daun Jeruk",
+        name: "Baju Over Size Polos Putih",
         price: "5000",
         stock: 0, // Contoh stok habis
         sold: "210",
         rating: "5.0",
-        image: "foto/basreng.jpg",
-        category: "Makanan",
-        desc: "Basreng renyah dengan bumbu pedas melimpah dan aroma daun jeruk yang segar."
+        image: "produk/WhatsApp Image 2026-02-14 at 17.30.39.jpeg",
+        category: "Pakaian",
+        desc: "Pakaian Polos Dengan Bahan Cotton Combed 24S Adem Dan Nyaman Di Pakai."
     },
     {
         id: 3,
-        name: "KERIPIK PISANG",
+        name: "Baju Over Size Polos Hitam",
         price: "15000",
         stock: 30,
         sold: "20",
         rating: "4.9",
-        image: "foto/kiripik.jpg",
-        category: "Makanan",
-        desc: "Keripik Pisang Renya,Punya Banyak Varian Rasa"
+        image: "produk/WhatsApp Image 2026-02-14 at 17.34.46.jpeg",
+        category: "Pakaian",
+        desc: "Pakaian Polos Dengan Bahan Cotton Combed 24S Adem Dan Nyaman Di Pakai."
     },
     {
         id: 4,
-        name: "SYNDICATE 06 // BATCH 01",
+        name: "Baju Over Size Sablon",
         price: "85000",
         stock: 5,
         sold: "12",
@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 
 
