@@ -6,7 +6,7 @@ const products = [
         stock: 5,
         sold: "45",
         rating: "4.9",
-        image: "foto/bach x.jpeg",
+        image: "produk/bach x.jpeg",
         category: "Aksesoris",
         desc: "Bach X Adalah Desain Terbatas SYNDICATE 06."
     },
@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 
 
