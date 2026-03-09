@@ -2,7 +2,7 @@ const products = [
     {
         id: 1,
         name: "SYNDICATE 06 // BATCH X",
-        price: "15000",
+        price: "100000",
         stock: 5,
         sold: "45",
         rating: "4.9",
@@ -13,7 +13,7 @@ const products = [
     {
         id: 2,
         name: "Baju Over Size Polos Putih",
-        price: "5000",
+        price: "50000",
         stock: 0, // Contoh stok habis
         sold: "210",
         rating: "5.0",
@@ -24,7 +24,7 @@ const products = [
     {
         id: 3,
         name: "Baju Over Size Polos Hitam",
-        price: "15000",
+        price: "50000",
         stock: 30,
         sold: "20",
         rating: "4.9",
@@ -35,7 +35,7 @@ const products = [
     {
         id: 4,
         name: "Baju Over Size Sablon",
-        price: "85000",
+        price: "90000",
         stock: 5,
         sold: "12",
         rating: "5.0",
@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 
 
