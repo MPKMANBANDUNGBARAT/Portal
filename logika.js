@@ -7,7 +7,7 @@ const products = [
         sold: "45",
         rating: "4.9",
         image: "produk/WhatsApp Image 2026-03-09 at 23.41.15.jpeg",
-        category: "Aksesoris",
+        category: "Pakaian",
         desc: "Bach X Adalah Desain Terbatas SYNDICATE 06."
     },
     {
@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 
 
 
